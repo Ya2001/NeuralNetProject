@@ -1,13 +1,18 @@
-body, html {
-    margin: auto;
-    overflow: hidden;
+/* Add this in your styles.css file to ensure canvas fills the screen */
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
+/* Add a red border to the canvas to verify if it's being displayed */
 #renderCanvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #000; 
+    width: 50%;
+    height: 50%;
+    border: 5px solid red; /* Temporarily add a border for debugging */
 }
+
+
+
