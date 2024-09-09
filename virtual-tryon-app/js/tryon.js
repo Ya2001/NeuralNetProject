@@ -1,5 +1,4 @@
-
-
+// No need to import Babylon.js when using the CDN
 const canvas = document.getElementById('renderCanvas');
 const engine = new BABYLON.Engine(canvas, true);
 
@@ -26,23 +25,7 @@ window.addEventListener('resize', function () {
     engine.resize();
 });
 
-console.log("Page Loaded");
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed");
-});
-
-console.log("Pose detection started");
-
-function onResults(results) {
-    if (results.poseLandmarks) {
-        console.log("Pose landmarks detected", results.poseLandmarks);
-        // Your 3D mesh positioning code here
-    } else {
-        console.log("No pose landmarks detected");
-    }
-}
-
-// Ensure you request camera permissions correctly
+// Handle camera permissions
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
         console.log("Camera access granted");
